@@ -18,7 +18,7 @@ for (int x = input; x > 0; x--) {
     println(x);
   }
   
-  //This code will handle anything that has a value less then zero
+  //This code will handle anything that has a value less then zero.
 for (int x = input; x < 0; x++) {
     if (x == -6) {
     println(minusSix); 
