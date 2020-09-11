@@ -1,38 +1,43 @@
-int red = 255;
-int green = 255;
-int yellow = 255;
-int black = 0;
-int gray = 150;
+color redTraffic = color(255, 0, 0);
+color yellowTraffic = color(255, 255, 0);
+color greenTraffic = color(0, 255, 0);
+color grayTraffic = color(150, 150, 150);
+color blackBox = color(0, 0, 0);
 
-void setup(){
-  size(800,800);
+void setup() {
+  size(800, 800);
 }
 
-void draw(){
-  
-rectMode(CENTER);
-ellipseMode(CENTER);
-  
+void draw() {
+
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+
   // Draw the traffic light box
- fill(black);  
-rect(400,400,300,600);
+  fill(blackBox);  
+  rect(400, 400, 300, 600);
 
   //Draw the yellow traffic light 'middle'
- fill(yellow,yellow,0);
-ellipse(400,400,100,100); 
+  if (key == '2') {
+    fill(yellowTraffic);
+  } else {
+    fill(grayTraffic);
+  }
+  ellipse(400, 400, 100, 100); 
 
-  //Draw green traffic light 'upper'
-if (keyPressed == true){
- fill(0,green,0);
-} else {
- fill(gray,gray,gray);
-}
-ellipse(400,200,100,100);
-  
-  //Draw the red traffic light 'lower'
- fill(red,0,0);
-ellipse(400,600,100,100);
-  
-  
-  
+  //Draw red traffic light 'upper'
+  if (key == '1') {
+    fill(redTraffic);
+  } else {
+    fill(grayTraffic);
+  }
+  ellipse(400, 200, 100, 100);
+
+  //Draw the green traffic light 'lower'
+  if (key == '3') {
+    fill(greenTraffic);
+  } else {
+    fill(grayTraffic);
+  }
+  ellipse(400, 600, 100, 100);
 }
