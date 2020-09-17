@@ -7,13 +7,13 @@
 //3.k in the setup() function print the name of the teacher
 //3.l in the setup() function print the names of both students and which teams they are from. 
 
-void setup(){
-  
-   Teacher teacher = new Teacher ("Rolf", 80, false);
-   Student student = new Student("Julius", 21, false, "DatHoldA");
-   Student studentos = new Student ("Oliver" 20, true, "DatHoldA");
+void setup() {
 
-  println(teacher + student + studentos);
-  
-  
+  Teacher teacher = new Teacher ("Rolf", 80, false);
+  Student studentOne = new Student("Julius", 21, false, "DatHoldA");
+  Student studentTwo = new Student ("Oliver", 20, true, "DatHoldA");
+
+  println(teacher);
+  println(studentOne);
+  println(studentTwo);
 }
