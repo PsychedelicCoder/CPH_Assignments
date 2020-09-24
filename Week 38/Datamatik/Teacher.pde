@@ -2,14 +2,15 @@
 //3.g in the Teacher tab, add a Constructor that takes in 3 parameters with the names "tmpName", "tmpAge", "tmpIsFemale" with the same datatypes used in 3.f
 //3.h populate the fields created in 3.f with the parameters of the constructor added in 3.g
 
-class Teacher{
+class Teacher {
 
   String name; 
   int age;
   boolean isFemale; 
-  
-  Teacher(String name, int age, boolean isFemale){
-  
-  
+
+  Teacher(String tmpName, int tmpAge, boolean tmpIsFemale) {
+    name = tmpName;
+    age = tmpAge;
+    isFemale = tmpIsFemale;
   }
 }
