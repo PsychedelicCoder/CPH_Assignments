@@ -1,60 +1,48 @@
-class Dot
-{
+class Dot {
   private int x;
   private int y;
   private final int maxX;
   private final int maxY;
-  
-  public Dot(int x, int y, int maxX, int maxY)
-  {
+
+  public Dot(int x, int y, int maxX, int maxY) {
     this.x = x;
     this.y = y;
     this.maxX = maxX;
     this.maxY = maxY;
   }
-  
-  public int getX()
-  {
+
+  public int getX() {
     return x;
   }
-  
-  public int getY()
-  {
+
+  public int getY() {
     return y;
   }
-  
-  public void moveLeft()
-  {
+
+  public void moveLeft() {
     --x;
-    if(x < 0)
-    {
+    if (x < 0) {
       x = 0;
     }
   }
-  
-  public void moveRight()
-  {
+
+  public void moveRight() {
     ++x;
-    if(x > maxX)
-    {
+    if (x > maxX) {
       x = maxX;
     }
   }
-  
-  public void moveUp()
-  {
+
+  public void moveUp() {
     --y;
-    if(y < 0)
-    {
+    if (y < 0) {
       y = 0;
     }
   }
-  
-  public void moveDown()
-  {
+
+  public void moveDown() {
     ++y;
-    if(y > maxY)
-    {
+    if (y > maxY) {
       y = maxY;
     }
   }
