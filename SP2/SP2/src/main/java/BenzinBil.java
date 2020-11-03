@@ -18,7 +18,20 @@ public class BenzinBil extends Bil {
         return kmPrL;
     }
 
-    protected double beregnGroenAfgift(int kmPrL) {
+    @Override
+    public String toString() {
+        return "BenzinBil{" +
+                "oktanTal=" + oktanTal +
+                ", kmPrL=" + kmPrL +
+                ", regNr='" + regNr + '\'' +
+                ", maerke='" + maerke + '\'' +
+                ", moddel='" + moddel + '\'' +
+                ", aargang=" + aargang +
+                ", antalDoere=" + antalDoere +
+                '}';
+    }
+
+    protected double beregnGroenAfgift() {
         if (kmPrL >= 20) {
             return 330;
         } else if (kmPrL > 15 && kmPrL <= 20) {
@@ -32,6 +45,8 @@ public class BenzinBil extends Bil {
         } else {
             return 0;
         }
+
+
 
     /*
     For en Benzinbil er afgiften afhængig af kmPrL.

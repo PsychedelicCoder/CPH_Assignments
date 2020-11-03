@@ -17,7 +17,7 @@ public class DielselBil extends Bil {
         return harPartikkelFilter;
     }
 
-    protected double beregnGroenAfgift(int kmPrL) {
+    protected double beregnGroenAfgift() {
         if (kmPrL >= 20 && harPartikkelFilter) {
             return 130;
         } else if (kmPrL > 15 && kmPrL <= 20 && harPartikkelFilter) {
@@ -41,5 +41,18 @@ public class DielselBil extends Bil {
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "DielselBil{" +
+                "kmPrL=" + kmPrL +
+                ", harPartikkelFilter=" + harPartikkelFilter +
+                ", regNr='" + regNr + '\'' +
+                ", maerke='" + maerke + '\'' +
+                ", moddel='" + moddel + '\'' +
+                ", aargang=" + aargang +
+                ", antalDoere=" + antalDoere +
+                '}';
     }
 }

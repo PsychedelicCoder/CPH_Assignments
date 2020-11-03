@@ -24,20 +24,17 @@ public class ElBil extends Bil {
         return whPrKm;
     }
 
-    public float whPrKmToKmPrL (float whPrKm){
-        return (float) ((whPrKm/91.25)/100);
-    }
-
-    protected double beregnGroenAfgift(int whPrKmToKmPrL) {
-        if (whPrKmToKmPrL >= 20) {
+    protected double beregnGroenAfgift() {
+        whPrKm = (float) (whPrKm / 91.25 / 100);
+        if (whPrKm >= 20) {
             return 330;
-        } else if (whPrKmToKmPrL > 15 && whPrKmToKmPrL <= 20) {
+        } else if (whPrKm > 15 && whPrKm <= 20) {
             return 1050;
-        } else if (whPrKmToKmPrL > 10 && whPrKmToKmPrL <= 15) {
+        } else if (whPrKm > 10 && whPrKm <= 15) {
             return 2340;
-        } else if (whPrKmToKmPrL > 5 && whPrKmToKmPrL <= 10) {
+        } else if (whPrKm > 5 && whPrKm <= 10) {
             return 5500;
-        } else if (whPrKmToKmPrL < 5) {
+        } else if (whPrKm < 5) {
             return 10470;
         } else {
             return 0;

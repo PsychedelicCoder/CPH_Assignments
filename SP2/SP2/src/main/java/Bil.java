@@ -13,7 +13,7 @@ public abstract class Bil {
         this.antalDoere = antalDoere;
     }
 
-    protected abstract double beregnGroenAfgift(int value);
+    abstract double beregnGroenAfgift();
 
     public String getRegNr() {
         return regNr;
@@ -33,5 +33,9 @@ public abstract class Bil {
 
     public int getAntalDoere() {
         return antalDoere;
+    }
+
+    public float beregnGrønEjerAfgift() {
+        return 0;
     }
 }
